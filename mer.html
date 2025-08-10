@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>MODELO ER</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gallery-container">
+                <h1>MODELO ENTIDAD RELACION (MER)</h1>
+            </div>
+            <div class="gallery-container">
+                <p>
+                    Es una herramienta para visualizar y representar la estructura de una base de datos,
+                    mostrando las entidades, sus atributos y las relaciones entre ellas.
+                </p>
+            </div>
+            <div class="gallery-container">
+                <h1>EJEMPLO</h1>
+            </div>
+            <div class="gallery-container">
+                <ol>
+                    <li>Requisitos del Sistema</li>
+                    <p>Una tienda online necesita guardar información sobre:</p>
+                    <ul>
+                        <li>Clientes: Cada cliente tiene un ID único, nombre y dirección.</li>
+                        <li>Productos: Cada producto tiene un ID único, nombre y precio.</li>
+                        <li>Pedidos: Un pedido se identifica por un ID, tiene una fecha y pertenece a un cliente.</li>
+                        <li>Artículos del pedido: Cada pedido contiene varios productos,
+                            y es importante saber la cantidad de cada producto que se pidió.</li>
+                    </ul><br>
+                    <li>Diseño del Modelo ER</li>
+                    <p>A partir de los requisitos, identificamos los componentes principales:</p>
+                    <ul>
+                        <li>Entidades</li>
+                        <p>- CLIENTE</p>
+                        <p>- PRODUCTO</p>
+                        <p>- PEDIDO</p>
+                        <li>Atributos</li>
+                        <p>- CLIENTE: ID_Cliente (clave primaria), Nombre, Direccion.</p>
+                        <p>- PRODUCTO: ID_Producto (clave primaria), Nombre, Precio.</p>
+                        <p>- PEDIDO: ID_Pedido (clave primaria), Fecha_Pedido.</p>
+                        <li>Relaciones</li>
+                        <p>- CLIENTE y PEDIDO:</p>
+                        <p>Un cliente realiza varios pedidos.<br>
+                            Un pedido es realizado por un solo cliente.<br>
+                            Esto es una relación Uno a Muchos (1:N). La relación se llama REALIZA.</p>
+                        <p>- PEDIDO y PRODUCTO:</p>
+                        <p>Un pedido contiene varios productos.<br>
+                            Un producto puede estar en varios pedidos.<br>
+                            Esto es una relación Muchos a Muchos (N:M). La relación se llama CONTIENE.<br>
+                            Esta relación tiene un atributo propio: Cantidad, que especifica cuántas unidades de un
+                            producto hay en un pedido.</p>
+                    </ul>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="der.html">Diagrama ER</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="mer.html">Modelo ER</a>
+            </li>
+            <li>
+                <i class="fa fa-user"></i>
+                <a href="aboutme.html.html">Sobre mi</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>

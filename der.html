@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>DIAGRAMA ER</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gallery-container">
+                <h1>DIAGRAMA ENTIDAD RELACION (DER)</h1>
+            </div>
+            <div class="gallery-container">
+                <p>
+                    Es una herramienta para modelar datos que permite representar visualmente
+                    y de forma simplificada la estructura de una base de datos.<br><br>
+                    - Peter Chen.
+                </p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img width="800" height="800"
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5iEL5JpUz9Cto68HG5Y1nVAQmJfHtP6-UbFHO62ousb33XFJ4Ej1NOMLB3mivwGAHiWUCFaQEqXMHbTC1ZhUUtA"
+                        alt="image" />
+                </div>
+            </div>
+            <div class="gallery-container">
+                <h1>COMPONENTES DEL DIAGRAMA ER</h1>
+            </div>
+            <div class="gallery-container">
+                <h3>COMPONENTE ENTIDAD</h3>
+                <p>
+                    Son los objetos o conceptos del mundo real sobre los que quieres guardar información.
+                <ul>
+                    <li>Representación: Rectángulo.</li>
+                    <li>Ejemplo: En una base de datos para una escuela, las entidades podrían ser Estudiante,
+                        Curso y Profesor.</li>
+                </ul>
+                </p>
+                <h3>COMPONENTE ATRIBUTO</h3>
+                <p>
+                    Son todas las características o propiedades que describen a una entidad.
+                <ul>
+                    <li>Representación: Óvalo.</li>
+                    <li>Ejemplo: Para la entidad Estudiante, los atributos serían nombre, apellido, ID_estudiante.</li>
+                </ul>
+                </p>
+                <h3>COMPONENTE RELACION</h3>
+                <p>
+                    Son los vínculos o asociaciones entre dos o más entidades en una base datos.
+                <ul>
+                    <li>Representación: Rombo.</li>
+                    <li>Ejemplo: La relación entre Estudiante y Curso podría ser se_matricula_en.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="gallery-container">
+                <h1>CARDINALIDAD</h1>
+            </div>
+            <div class="gallery-container">
+                <p>
+                    Un aspecto crucial del Modelo E-R es la cardinalidad, que define el número de instancias de una
+                    entidad que se pueden asociar con otra. Los tipos más comunes son:
+                <ul>
+                    <li>Uno a Uno <b>(1:1)</b>: Por ejemplo, un Profesor dirige un único Departamento.</li>
+                    <li>Uno a Muchos <b>(1:N)</b>: Por ejemplo, un Profesor imparte muchos Cursos.</li>
+                    <li>Muchos a Muchos <b>(N:M)</b>: Por ejemplo, un Estudiante se matricula en muchos Cursos, y un
+                        Curso tiene muchos Estudiantes.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="gallery-container">
+                <h1>EJEMPLO</h1>
+            </div>
+            <div class="gallery-container">
+                <ul>
+                    <li>Gestión de una Empresa de Desarrollo de Software<br><br>
+                        Una empresa de desarrollo de software necesita una base de datos para organizar a sus empleados,
+                        los proyectos en los que trabajan y los departamentos a los que pertenecen.</li>
+                </ul>
+                <ol>
+                    <li>Requisitos del sistema:</li>
+                </ol>
+                <ul>
+                    <li>La empresa tiene varios Departamentos (se guarda el nombre del departamento y su ID).</li>
+                    <li>Cada Empleado tiene un ID único, nombre y cargo.</li>
+                    <li>Los empleados están asignados a un único departamento.</li>
+                    <li>Los empleados pueden trabajar en uno o varios Proyectos. De cada proyecto se necesita saber su
+                        nombre y su ID.</li>
+                </ul>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img width="800" height="800"
+                        src="https://i.ibb.co/1fDsfzbp/Gesti-n-de-una-Empresa-de-Desarrollo-de-Software.jpg"
+                        alt="image" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="der.html">Diagrama ER</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="mer.html">Modelo ER</a>
+            </li>
+            <li>
+                <i class="fa fa-user"></i>
+                <a href="aboutme.html">Sobre mi</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>

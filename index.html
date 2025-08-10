@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>INICIO</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gallery-container">
+                <h1>BASE DE DATOS</h1>
+            </div>
+            <div class="gallery-container">
+                <p>
+                    Una base de datos es una colección organizada de datos que se almacena y gestiona de forma
+                    electrónica.
+                    Piensa en ella como un archivo o un conjunto de tablas interrelacionadas, similar a una hoja de
+                    cálculo, pero mucho más potente y estructurada. <br>
+                    <br>
+                    El objetivo principal de una base de datos es permitir que la información se almacene, se recupere,
+                    se modifique y se gestione de manera eficiente y segura.
+                </p>
+            </div>
+            <div class="gallery-container">
+                <h1>ESTRUCTURA DE BASE DE DATOS</h1>
+            </div>
+            <div class="gallery-container">
+                <h3>TABLA</h3>
+                <p>
+                    Una tabla es el componente principal de una base de datos.
+                    Piénsala como una hoja de cálculo completa que contiene información sobre una entidad específica,
+                    como "Clientes", "Productos" o "Empleados".</p>
+                <ul>
+                    <li>Función: Organiza los datos de manera lógica y coherente.</li>
+                    <li>Ejemplo: En una base de datos de una tienda, podrías tener una tabla llamada PRODUCTOS que
+                        almacene la información de cada artículo en venta.</li>
+                </ul>
+                
+                <h3>ATRIBUTO (COLUMNA)</h3>
+                <p>
+                    Los atributos son las características o propiedades que describen a la entidad de la tabla.
+                    Son las columnas de la tabla.</p>
+                <ul>
+                    <li>Función: Definen el tipo de dato que se almacenará en cada columna.</li>
+                    <li>Ejemplo: En la tabla PRODUCTOS, los atributos serían ID_Producto, Nombre, Precio y Stock.</li>
+                </ul>
+                
+                <h3>TUPLA (FILA)</h3>
+                <p>
+                    Una tupla es una instancia individual de la entidad, es decir, una fila completa en la tabla.
+                    Cada registro contiene un valor para cada uno de los atributos.</p>
+                <ul>
+                    <li>Función: Representan una entrada única de información.</li>
+                    <li>Ejemplo: En la tabla PRODUCTOS, un registro sería:</li><br>
+                
+                    <li>ID_Producto: 101</li>
+                    <li>Nombre: Camiseta de algodón</li>
+                    <li>Precio: 25.50</li>
+                    <li>Stock: 150</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="der.html">Diagrama ER</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="mer.html">Modelo ER</a>
+            </li>
+            <li>
+                <i class="fa fa-user"></i>
+                <a href="aboutme.html.html">Sobre mi</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
