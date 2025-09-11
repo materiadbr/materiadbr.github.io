@@ -84,6 +84,10 @@ body {
     display: block;
 }
 
+.close{
+   position:fixed;
+}
+
 nav {
    position: fixed;
    top: 0;
@@ -159,6 +163,10 @@ nav ul li a i {
    color: #333;
 }
 
+.content b {
+   color: #3E6E93;
+}
+
 .content small {
    display: block;
    margin-top: 10px;
@@ -191,7 +199,7 @@ nav ul li a i {
 
 .gallery-item img {
    width: 100%;
-   height: auto;
+   height: 100%;
    display: block;
    border-radius: 8px;
    object-fit: cover;
@@ -228,6 +236,46 @@ nav ul li a i {
 
 .fa-instagram:hover {
    color: #E1306C;
+}
+
+.code-block-container {
+   background-color: #111;
+    width: 100%; 
+    max-width: 700px; 
+    margin: 0px auto; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+.code-language {
+   background-color: #333; 
+   color: #fff; 
+   padding: 2px 0px 4px 0px ; 
+   font-family: 'Consolas', 'Monaco', monospace; 
+   font-weight: bold;
+   font-size: 1.3em;
+   border-top-left-radius: 8px; 
+   border-top-right-radius: 8px; 
+}
+
+.code-content { 
+   color: #fff; 
+   padding: 0px 0px 0px 15px;
+   font-family: 'Consolas', 'Monaco', monospace; 
+   font-size: 1em;
+   white-space: pre-wrap; 
+   word-wrap: break-word; 
+   border-bottom-left-radius: 8px; 
+   border-bottom-right-radius: 8px; 
+}
+
+.code-content-t{ 
+   color: #fff; 
+   padding: 0px 0px 0px 15px;
+}
+
+.code-content code {
+   display: block; 
 }
 
 @keyframes fadeIn {
@@ -282,16 +330,16 @@ nav ul li a i {
        transform: translateX(150px) scale(0.99);
    }
 
-   .content {
-       padding: 0 10px;
-   }
-
    .content h1 {
        font-size: 1.5rem;
    }
 
    .content h2 {
        font-size: 1.3rem;
+   }
+
+   .content p {
+       font-size: 1rem;
    }
 
    nav {
