@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>MYSQL</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gallery-container">
+                <h1>MYSQL</h1>
+            </div><br>
+
+            <div class="gallery-container">
+               <h3>Comando <b>CREATE DATABASE</b></h3>
+                <p>El comando CREATE DATABASE en MySQL es usado para crear una nueva base de datos.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE DATABASE sistema_ventas;
+                        </code></pre>
+                    </div> 
+
+               <h3>Comando <b>CREATE TABLE</b></h3>
+                <p>El comando CREATE TABLE en MySQL es usado para crear una nueva tabla en una base de datos existente.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE TABLE clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE
+);
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>CREATE INDEX</b></h3>
+                <p>El comando CREATE INDEX en MySQL es usado para crear un índice en una o más columnas de una tabla para mejorar el rendimiento de las búsquedas.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE INDEX idx_nombre_cliente ON clientes (nombre);
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>CREATE TRIGGER</b></h3>
+                <p>El comando CREATE TRIGGER en MySQL es usado para crear un disparador, un conjunto de instrucciones que se ejecuta automáticamente cuando ocurre un evento (como INSERT, UPDATE o DELETE) en una tabla específica.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE TRIGGER actualizar_stock_despues_de_venta
+AFTER INSERT ON pedidos
+FOR EACH ROW
+UPDATE productos SET stock = stock - NEW.cantidad WHERE id = NEW.producto_id;
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>CREATE PROCEDURE</b></h3>
+                <p>El comando CREATE PROCEDURE en MySQL es usado para crear rutinas almacenadas (bloques de código reutilizable) que se ejecutan en el servidor.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE PROCEDURE ObtenerTodosClientes()
+BEGIN
+  SELECT * FROM clientes;
+END;
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>CREATE EVENT</b></h3>
+                <p>El comando CREATE EVENT en MySQL es usado para crear un evento, una tarea programada que se ejecuta automáticamente en un horario específico.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE EVENT limpiar_registrzos
+ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 1 MONTH
+DO
+  DELETE FROM registros WHERE fecha < NOW() - INTERVAL 1 YEAR;
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>ALTER TABLE</b></h3>
+                <p>El comando ALTER TABLE en MySQL es usado para modificar la estructura de una tabla. Puedes agregar, eliminar o modificar columnas, y cambiar restricciones.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+ALTER TABLE clientes
+ADD COLUMN telefono VARCHAR(20),  -- Añadir una columna
+MODIFY COLUMN email VARCHAR(255) NOT NULL; -- Modificar una columna
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>RENAME TABLE</b></h3>
+                <p>El comando RENAME TABLE en MySQL es usado para cambiar el nombre de una tabla.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+RENAME TABLE clientes TO clientes_registrados;
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>DROP</b></h3>
+                <p>El comando RENAME TABLE en MySQL es usado para eliminar completamente un objeto de la base de datos (tablas, bases de datos, índices, etc.).</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+DROP TABLE clientes;
+DROP VIEW clientes_importantes;
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>TRUNCATE TABLE</b></h3>
+                <p>El comando RENAME TABLE en MySQL es usado para eliminar todas las filas de una tabla, reiniciando su AUTO_INCREMENT. Es mucho más rápido que DELETE para eliminar todos los registros.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+TRUNCATE TABLE clientes;
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>CREATE USER</b></h3>
+                <p>El comando CREATE USER en MySQL es usado para crear una nueva cuenta de usuario en el servidor.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+CREATE USER 'administrador'@'localhost' IDENTIFIED BY 'contraseña_segura';
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>GRANT</b></h3>
+                <p>El comando GRANT en MySQL es usado para conceder permisos a un usuario para realizar acciones específicas en la base de datos.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+GRANT ALL PRIVILEGES ON sistema_ventas.* TO 'administrador'@'localhost';
+                        </code></pre>
+                    </div>
+
+                    <h3>Comando <b>REVOKE</b></h3>
+                <p>El comando REVOKE en MySQL es usado para retirar permisos previamente concedidos a un usuario.</p>
+                    <ul>
+                        <li>Ejemplo:
+                    </ul>
+
+                    <div class="code-block-container">
+                        <div class="code-language"><pre class="code-content-t">SQL</pre></div>
+<pre class="code-content"><code>
+REVOKE DELETE ON sistema_ventas.* FROM 'administrador'@'localhost';
+                        </code></pre>
+                    </div>
+        </div>
+    </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="der.html">Diagrama ER</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="mer.html">Modelo ER</a>
+            </li>
+            <li>
+                <i class="fa fa-database"></i>
+                <a href="mysql.html">MySQL</a>
+            </li>
+            <li>
+                <i class="fa fa-user"></i>
+                <a href="aboutme.html">Sobre mi</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
